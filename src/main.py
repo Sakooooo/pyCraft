@@ -1,8 +1,6 @@
 import pygame
 import sys 
 import os
-import OpenGL.GL 
-import OpenGL.GLU
 import math as m 
 import numpy as np
 
@@ -14,7 +12,9 @@ if (pygame.get_init() == False):
     sys.exit(1)
 
 PI = m.pi
-fov = 45 * PI/180 
+#fov = 90 * PI/180 
+fov = 90
+lookSpeed = 10
 WIDTH , HEIGHT = 1000, 700
 
 player_pos = np.array([0,0,-4], dtype=np.float32)
@@ -97,6 +97,9 @@ while (isRunning):
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_q:
                 isRunning = False 
+            if event.key == pygame.K_l:
+                camera_rot_x += lookSpeed 
+
     #Creating the projection matrix
     translation_matrix = np.matrix([[ 1 , 0 , 0 , -player_pos[0]],
                           [ 0 , 1 , 0 , -player_pos[1]],
