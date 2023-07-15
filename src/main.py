@@ -15,6 +15,9 @@ window = pygame.display.set_mode((1000, 700))
 
 testimg = pygame.image.load(os.path.join("./res/test.png"))
 
+cubeimg = pygame.image.load(os.path.join("./res/cube.png"))
+cuberect = cubeimg.get_rect() 
+
 while (isRunning):
     # TODO(sako):: make this a different file
     for event in pygame.event.get():
@@ -24,7 +27,8 @@ while (isRunning):
             isRunning = False
     window.fill("grey")
 
-    #window.blit(testimg, (0, 0))
+    window.blit(cubeimg, cuberect)
+    pygame.draw.rect(window, "red", cuberect, 1)
 
     pygame.display.flip()
 
