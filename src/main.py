@@ -26,6 +26,8 @@ time = pygame.time.Clock()
 
 pygame.display.set_caption("PyCraft!")
 
+cubeimg = pygame.image.load(os.path.join("./res/cube.png"))
+
 
 while (isRunning):
     # TODO(sako):: make this a different file
@@ -35,9 +37,9 @@ while (isRunning):
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_q:
                 isRunning = False 
-                cube.cube
     window.fill("BLACK")
 
+    window.blit(cubeimg, (WIDTH/2 , HEIGHT/2 ))
     pygame.display.update()
     time.tick(60) 
 

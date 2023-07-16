@@ -5,4 +5,5 @@ import numpy as np
 PI = m.pi
 
 class cube():
-    print("Hello")
+    cube = 1 
+            
