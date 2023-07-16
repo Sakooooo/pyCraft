@@ -29,6 +29,7 @@ pygame.display.set_caption("PyCraft!")
 cubeimg = pygame.image.load(os.path.join("./res/cube.png"))
 
 
+
 while (isRunning):
     # TODO(sako):: make this a different file
     for event in pygame.event.get():
@@ -40,7 +41,6 @@ while (isRunning):
     window.fill("BLACK")
 
     window.blit(cubeimg, (WIDTH/2 , HEIGHT/2 ))
-    pygame.display.update()
     time.tick(60) 
 
 print("Pygame has exited sucessfully :)")
