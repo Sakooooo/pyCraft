@@ -36,11 +36,11 @@ while (isRunning):
         if event.type == pygame.QUIT:
             isRunning = False
         if event.type == pygame.KEYDOWN:
+            cube.drawCube()
             if event.key == pygame.K_q:
                 isRunning = False 
     window.fill("BLACK")
 
-    window.blit(cubeimg, (WIDTH/2 , HEIGHT/2 ))
     time.tick(60) 
 
 print("Pygame has exited sucessfully :)")

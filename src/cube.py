@@ -1,9 +1,11 @@
 import pygame
 import math as m
 import numpy as np
+import main
 
 PI = m.pi
 
-class cube():
-    cube = 1 
+def drawCube():
+    print("hello")
+        
             
