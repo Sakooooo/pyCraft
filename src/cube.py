@@ -6,6 +6,4 @@ import main
 PI = m.pi
 
 def drawCube():
-    print("hello")
-        
-            
+    print ( " IO  AM LAZY")            
