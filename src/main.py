@@ -4,7 +4,7 @@ import sys
 
 
 class GraphicsEngine:
-    def __init__(self, win_size=(800, 800)):
+    def __init__(self, win_size=(800, 600)):
         # initalize
         # like SDL_INIT_EVERYTHING
         pg.init()
