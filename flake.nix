@@ -10,8 +10,12 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     devShells.${system}.default = pkgs.mkShell {
-      packages = [
-        (pkgs.python3.withPackages (python-pkgs: [
+      packages = with pkgs; [
+        # lsp
+        pyright
+        # formatter
+        black
+        (python3.withPackages (python-pkgs: [
           python-pkgs.pygame
           python-pkgs.numpy
           python-pkgs.moderngl
